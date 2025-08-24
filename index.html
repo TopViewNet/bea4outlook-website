@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beA4Outlook - Die All-in-One E-Mail-Lösung für Anwälte</title>
+    <meta name="description" content="beA4Outlook ermöglicht Rechtsanwälten den direkten Zugriff auf ihr beA-Postfach von jedem Gerät aus. Teil des anwaltsoft Datenmanagementsystems.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home">
+                    <span class="brand-text">beA4Outlook</span>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link" data-de="Startseite" data-en="Home">Startseite</a>
+                <a href="#about" class="nav-link" data-de="Über uns" data-en="About">Über uns</a>
+                <a href="#solutions" class="nav-link" data-de="Leistungen" data-en="Solutions">Leistungen</a>
+                <a href="#contact" class="nav-link" data-de="Kontakt" data-en="Contact">Kontakt</a>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="de">DE</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">beA4Outlook</div>
+            <div class="preloader-spinner"></div>
+            <div class="preloader-text" data-de="Wird geladen..." data-en="Loading...">Wird geladen...</div>
+        </div>
+    </div>
+
+    <main>
+        <section id="home" class="hero min-h-screen pt-24">
+            <div class="hero-particles"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span data-de="Willkommen bei " data-en="Welcome to ">Willkommen bei </span>
+                        <span class="brand-highlight">beA4Outlook</span>
+                    </h1>
+                    <div class="hero-subtitle-container">
+                        <span class="typing-text" data-de="Die All-in-One E-Mail-Lösung, speziell entwickelt für Anwälte" data-en="The All-in-One Email Solution, specifically developed for lawyers">
+                            Die All-in-One E-Mail-Lösung, speziell entwickelt für Anwälte
+                        </span>
+                        <span class="typing-cursor">|</span>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="10000">0</div>
+                            <div class="stat-label" data-de="Zufriedene Kunden" data-en="Happy Customers">Zufriedene Kunden</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="99.9">0</div>
+                            <div class="stat-label" data-de="% Verfügbarkeit" data-en="% Uptime">% Verfügbarkeit</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="24">0</div>
+                            <div class="stat-label" data-de="/7 Support" data-en="/7 Support">/7 Support</div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-advanced" data-de="Kostenlose Testversion starten" data-en="Start Free Trial">
+                            <i class="fas fa-rocket"></i>
+                            <span>Kostenlose Testversion starten</span>
+                        </button>
+                        <button class="btn btn-secondary btn-advanced" data-de="Live Demo ansehen" data-en="Watch Live Demo">
+                            <i class="fas fa-play"></i>
+                            <span>Live Demo ansehen</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="mockup-container">
+                        <div class="mockup-screen">
+                            <div class="mockup-header">
+                                <div class="mockup-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="mockup-title">beA4Outlook</div>
+                            </div>
+                            <div class="mockup-content">
+                                <div class="mockup-email">
+                                    <div class="email-item">
+                                        <div class="email-sender">Mandant A.</div>
+                                        <div class="email-subject">Wichtige Unterlagen</div>
+                                    </div>
+                                    <div class="email-item">
+                                        <div class="email-sender">Gericht B.</div>
+                                        <div class="email-subject">Terminbestätigung</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title" data-de="Über uns" data-en="About us">Über uns</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 data-de="beA-Integration" data-en="beA Integration">beA-Integration</h3>
+                        <p data-de="Direkter Zugriff auf Ihr beA-Postfach von jedem Gerät aus. Nahtlose Integration in Ihren Arbeitsalltag." data-en="Direct access to your beA mailbox from any device. Seamless integration into your daily workflow.">
+                            Direkter Zugriff auf Ihr beA-Postfach von jedem Gerät aus. Nahtlose Integration in Ihren Arbeitsalltag.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 data-de="Datenschutz" data-en="Data Protection">Datenschutz</h3>
+                        <p data-de="Höchste Sicherheitsstandards für sensible Anwaltskommunikation. DSGVO-konform und verschlüsselt." data-en="Highest security standards for sensitive legal communication. GDPR compliant and encrypted.">
+                            Höchste Sicherheitsstandards für sensible Anwaltskommunikation. DSGVO-konform und verschlüsselt.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-sync"></i>
+                        </div>
+                        <h3 data-de="Synchronisation" data-en="Synchronization">Synchronisation</h3>
+                        <p data-de="Automatische Synchronisation aller E-Mails und Anhänge zwischen allen Ihren Geräten." data-en="Automatic synchronization of all emails and attachments between all your devices.">
+                            Automatische Synchronisation aller E-Mails und Anhänge zwischen allen Ihren Geräten.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 data-de="Mobilität" data-en="Mobility">Mobilität</h3>
+                        <p data-de="Vollständige Funktionalität auf Smartphone, Tablet und Desktop. Überall einsatzbereit." data-en="Full functionality on smartphone, tablet and desktop. Ready for use everywhere.">
+                            Vollständige Funktionalität auf Smartphone, Tablet und Desktop. Überall einsatzbereit.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 data-de="Effizienz" data-en="Efficiency">Effizienz</h3>
+                        <p data-de="Sparen Sie Zeit durch intelligente Automatisierung und optimierte Workflows für den Anwaltsalltag." data-en="Save time through intelligent automation and optimized workflows for daily legal practice.">
+                            Sparen Sie Zeit durch intelligente Automatisierung und optimierte Workflows für den Anwaltsalltag.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 data-de="Support" data-en="Support">Support</h3>
+                        <p data-de="Professioneller 24/7 Support von Experten für Anwaltssoftware und beA-Integration." data-en="Professional 24/7 support from experts in legal software and beA integration.">
+                            Professioneller 24/7 Support von Experten für Anwaltssoftware und beA-Integration.
+                        </p>
+                    </div>
+                </div>
+                <div class="anwaltsoft-integration">
+                    <p data-de="beA4Outlook ist Teil des anwaltsoft Datenmanagementsystems und voll integriert in alle Kanzleiprozesse." data-en="beA4Outlook is part of the anwaltsoft data management system and fully integrated into all law firm processes.">
+                        beA4Outlook ist Teil des anwaltsoft Datenmanagementsystems und voll integriert in alle Kanzleiprozesse.
+                    </p>
+                    <a href="https://anwaltsoft.de" class="anwaltsoft-link" data-de="Mehr zu anwaltsoft" data-en="More about anwaltsoft">
+                        Mehr zu anwaltsoft →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="solutions" class="solutions-section">
+            <div class="container">
+                <h2 class="section-title" data-de="Unsere Lösungen" data-en="Our Solutions">Unsere Lösungen</h2>
+                
+                <!-- Interactive Tabs -->
+                <div class="solutions-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="email" data-de="E-Mail" data-en="Email">E-Mail</button>
+                        <button class="tab-btn" data-tab="security" data-de="Sicherheit" data-en="Security">Sicherheit</button>
+                        <button class="tab-btn" data-tab="integration" data-de="Integration" data-en="Integration">Integration</button>
+                        <button class="tab-btn" data-tab="analytics" data-de="Analytics" data-en="Analytics">Analytics</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="email">
+                            <div class="tab-layout">
+                                <div class="tab-text">
+                                    <h3 data-de="Intelligentes E-Mail-Management" data-en="Intelligent Email Management">Intelligentes E-Mail-Management</h3>
+                                    <ul>
+                                        <li data-de="Automatische Sortierung und Kategorisierung" data-en="Automatic sorting and categorization">Automatische Sortierung und Kategorisierung</li>
+                                        <li data-de="KI-basierte Prioritätserkennung" data-en="AI-based priority recognition">KI-basierte Prioritätserkennung</li>
+                                        <li data-de="Smart Reply Vorschläge" data-en="Smart Reply suggestions">Smart Reply Vorschläge</li>
+                                        <li data-de="Erweiterte Suchfunktionen" data-en="Advanced search functions">Erweiterte Suchfunktionen</li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-sm">
+                                        <span data-de="Mehr erfahren" data-en="Learn More">Mehr erfahren</span>
+                                    </button>
+                                </div>
+                                <div class="tab-visual">
+                                    <div class="feature-demo email-demo">
+                                        <div class="demo-header">
+                                            <i class="fas fa-inbox"></i>
+                                            <span>Posteingang</span>
+                                        </div>
+                                        <div class="demo-items">
+                                            <div class="demo-item priority-high">
+                                                <div class="priority-dot"></div>
+                                                <span>Eilverfahren - Termin morgen</span>
+                                            </div>
+                                            <div class="demo-item priority-medium">
+                                                <div class="priority-dot"></div>
+                                                <span>Mandant Anfrage</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane" id="security">
+                            <div class="tab-layout">
+                                <div class="tab-text">
+                                    <h3 data-de="Höchste Sicherheitsstandards" data-en="Highest Security Standards">Höchste Sicherheitsstandards</h3>
+                                    <ul>
+                                        <li data-de="Ende-zu-Ende Verschlüsselung" data-en="End-to-end encryption">Ende-zu-Ende Verschlüsselung</li>
+                                        <li data-de="Zwei-Faktor-Authentifizierung" data-en="Two-factor authentication">Zwei-Faktor-Authentifizierung</li>
+                                        <li data-de="DSGVO-konforme Datenverarbeitung" data-en="GDPR compliant data processing">DSGVO-konforme Datenverarbeitung</li>
+                                        <li data-de="Regelmäßige Sicherheitsaudits" data-en="Regular security audits">Regelmäßige Sicherheitsaudits</li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-sm">
+                                        <span data-de="Sicherheit prüfen" data-en="Check Security">Sicherheit prüfen</span>
+                                    </button>
+                                </div>
+                                <div class="tab-visual">
+                                    <div class="feature-demo security-demo">
+                                        <div class="security-shield">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <div class="security-rings">
+                                                <div class="ring ring1"></div>
+                                                <div class="ring ring2"></div>
+                                                <div class="ring ring3"></div>
+                                            </div>
+                                        </div>
+                                        <div class="security-status">
+                                            <span class="status-text">Sicher verschlüsselt</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane" id="integration">
+                            <div class="tab-layout">
+                                <div class="tab-text">
+                                    <h3 data-de="Nahtlose Integration" data-en="Seamless Integration">Nahtlose Integration</h3>
+                                    <ul>
+                                        <li data-de="Vollständige anwaltsoft Integration" data-en="Complete anwaltsoft integration">Vollständige anwaltsoft Integration</li>
+                                        <li data-de="API-Schnittstellen für Drittsysteme" data-en="API interfaces for third-party systems">API-Schnittstellen für Drittsysteme</li>
+                                        <li data-de="Kalendersynchronisation" data-en="Calendar synchronization">Kalendersynchronisation</li>
+                                        <li data-de="Dokumentenmanagement-Integration" data-en="Document management integration">Dokumentenmanagement-Integration</li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-sm">
+                                        <span data-de="Integration testen" data-en="Test Integration">Integration testen</span>
+                                    </button>
+                                </div>
+                                <div class="tab-visual">
+                                    <div class="feature-demo integration-demo">
+                                        <div class="integration-hub">
+                                            <div class="hub-center">beA4Outlook</div>
+                                            <div class="hub-connection" style="--angle: 0deg;">
+                                                <span>anwaltsoft</span>
+                                            </div>
+                                            <div class="hub-connection" style="--angle: 120deg;">
+                                                <span>Kalender</span>
+                                            </div>
+                                            <div class="hub-connection" style="--angle: 240deg;">
+                                                <span>Dokumente</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane" id="analytics">
+                            <div class="tab-layout">
+                                <div class="tab-text">
+                                    <h3 data-de="Intelligente Analytics" data-en="Intelligent Analytics">Intelligente Analytics</h3>
+                                    <ul>
+                                        <li data-de="E-Mail Performance Tracking" data-en="Email performance tracking">E-Mail Performance Tracking</li>
+                                        <li data-de="Arbeitszeit-Optimierung" data-en="Working time optimization">Arbeitszeit-Optimierung</li>
+                                        <li data-de="Mandanten-Kommunikations-Analyse" data-en="Client communication analysis">Mandanten-Kommunikations-Analyse</li>
+                                        <li data-de="Custom Reports und Dashboards" data-en="Custom reports and dashboards">Custom Reports und Dashboards</li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-sm">
+                                        <span data-de="Dashboard ansehen" data-en="View Dashboard">Dashboard ansehen</span>
+                                    </button>
+                                </div>
+                                <div class="tab-visual">
+                                    <div class="feature-demo analytics-demo">
+                                        <div class="chart-container">
+                                            <div class="chart-bar" style="--height: 60%"></div>
+                                            <div class="chart-bar" style="--height: 80%"></div>
+                                            <div class="chart-bar" style="--height: 45%"></div>
+                                            <div class="chart-bar" style="--height: 90%"></div>
+                                        </div>
+                                        <div class="analytics-stats">
+                                            <div class="stat">
+                                                <span class="stat-value">↑ 25%</span>
+                                                <span class="stat-desc">Effizienz</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2 class="section-title" data-de="Kontakt" data-en="Contact">Kontakt</h2>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+49 93161423087</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@letaiwork4u.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Höchberg, Deutschland</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span data-de="Montag - Freitag, 9:00 - 17:00" data-en="Monday - Friday, 9:00 - 17:00">Montag - Freitag, 9:00 - 17:00</span>
+                        </div>
+                        
+                        <!-- Search Feature -->
+                        <div class="search-widget">
+                            <h3 data-de="Schnellsuche" data-en="Quick Search">Schnellsuche</h3>
+                            <div class="search-container">
+                                <input type="text" id="siteSearch" placeholder="Suche auf der Website..." data-de-placeholder="Suche auf der Website..." data-en-placeholder="Search the website...">
+                                <button type="button" class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="search-results" id="searchResults"></div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="advancedContactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label data-de="Name *" data-en="Name *">Name *</label>
+                                    <input type="text" name="name" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label data-de="E-Mail *" data-en="Email *">E-Mail *</label>
+                                    <input type="email" name="email" required>
+                                    <span class="error-message"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label data-de="Unternehmen" data-en="Company">Unternehmen</label>
+                                <input type="text" name="company">
+                            </div>
+                            <div class="form-group">
+                                <label data-de="Betreff *" data-en="Subject *">Betreff *</label>
+                                <select name="subject" required>
+                                    <option value="" data-de="Bitte wählen..." data-en="Please select...">Bitte wählen...</option>
+                                    <option value="demo" data-de="Demo anfragen" data-en="Request Demo">Demo anfragen</option>
+                                    <option value="support" data-de="Support" data-en="Support">Support</option>
+                                    <option value="sales" data-de="Vertrieb" data-en="Sales">Vertrieb</option>
+                                    <option value="partnership" data-de="Partnerschaft" data-en="Partnership">Partnerschaft</option>
+                                </select>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label data-de="Nachricht *" data-en="Message *">Nachricht *</label>
+                                <textarea name="message" rows="5" required data-de-placeholder="Beschreiben Sie Ihr Anliegen..." data-en-placeholder="Describe your request..."></textarea>
+                                <span class="error-message"></span>
+                                <div class="char-counter">
+                                    <span class="current">0</span> / <span class="max">500</span> <span data-de="Zeichen" data-en="characters">Zeichen</span>
+                                </div>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    <span data-de="Ich akzeptiere die Datenschutzbestimmungen" data-en="I accept the privacy policy">Ich akzeptiere die Datenschutzbestimmungen</span>
+                                </label>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    <span data-de="Ich möchte den Newsletter erhalten" data-en="I want to receive the newsletter">Ich möchte den Newsletter erhalten</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-advanced">
+                                <i class="fas fa-paper-plane"></i>
+                                <span data-de="Nachricht senden" data-en="Send Message">Nachricht senden</span>
+                                <div class="btn-loader"></div>
+                            </button>
+                        </form>
+                        
+                        <!-- Success Message -->
+                        <div class="form-success" id="formSuccess">
+                            <i class="fas fa-check-circle"></i>
+                            <h3 data-de="Nachricht gesendet!" data-en="Message sent!">Nachricht gesendet!</h3>
+                            <p data-de="Vielen Dank für Ihre Nachricht. Wir melden uns in Kürze bei Ihnen." data-en="Thank you for your message. We will get back to you shortly.">Vielen Dank für Ihre Nachricht. Wir melden uns in Kürze bei Ihnen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <i class="fas fa-cookie-bite"></i>
+                <span data-de="Diese Website verwendet Cookies, um Ihnen die bestmögliche Erfahrung zu bieten." data-en="This website uses cookies to provide you with the best possible experience.">
+                    Diese Website verwendet Cookies, um Ihnen die bestmögliche Erfahrung zu bieten.
+                </span>
+            </div>
+            <div class="cookie-buttons">
+                <button class="btn btn-secondary btn-sm" id="cookieSettings" data-de="Einstellungen" data-en="Settings">Einstellungen</button>
+                <button class="btn btn-primary btn-sm" id="acceptCookies" data-de="Alle akzeptieren" data-en="Accept All">Alle akzeptieren</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings Modal -->
+    <div id="cookieModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeCookieModal">&times;</span>
+            <h2 data-de="Cookie-Einstellungen" data-en="Cookie Settings">Cookie-Einstellungen</h2>
+            <div class="cookie-categories">
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="essentialCookies" checked disabled>
+                            <span class="checkmark"></span>
+                            <span data-de="Notwendige Cookies" data-en="Essential Cookies">Notwendige Cookies</span>
+                        </label>
+                    </div>
+                    <p data-de="Diese Cookies sind für das Funktionieren der Website erforderlich." data-en="These cookies are required for the website to function.">
+                        Diese Cookies sind für das Funktionieren der Website erforderlich.
+                    </p>
+                </div>
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="analyticsCookies">
+                            <span class="checkmark"></span>
+                            <span data-de="Analyse-Cookies" data-en="Analytics Cookies">Analyse-Cookies</span>
+                        </label>
+                    </div>
+                    <p data-de="Diese Cookies helfen uns, die Website zu verbessern." data-en="These cookies help us improve the website.">
+                        Diese Cookies helfen uns, die Website zu verbessern.
+                    </p>
+                </div>
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="marketingCookies">
+                            <span class="checkmark"></span>
+                            <span data-de="Marketing-Cookies" data-en="Marketing Cookies">Marketing-Cookies</span>
+                        </label>
+                    </div>
+                    <p data-de="Diese Cookies werden für personalisierte Werbung verwendet." data-en="These cookies are used for personalized advertising.">
+                        Diese Cookies werden für personalisierte Werbung verwendet.
+                    </p>
+                </div>
+            </div>
+            <div class="cookie-modal-buttons">
+                <button class="btn btn-secondary" id="rejectAll" data-de="Alle ablehnen" data-en="Reject All">Alle ablehnen</button>
+                <button class="btn btn-primary" id="saveCookieSettings" data-de="Einstellungen speichern" data-en="Save Settings">Einstellungen speichern</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Nach oben">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>beA4Outlook</h3>
+                    <p data-de="Professionelle E-Mail-Lösung für Rechtsanwälte" data-en="Professional email solution for lawyers">
+                        Professionelle E-Mail-Lösung für Rechtsanwälte
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-de="Links" data-en="Links">Links</h3>
+                    <ul>
+                        <li><a href="https://anwaltsoft.de" data-de="anwaltsoft Hauptseite" data-en="anwaltsoft Main Page">anwaltsoft Hauptseite</a></li>
+                        <li><a href="https://letaiwork4u.com">LetAIwork4u</a></li>
+                        <li><a href="#impressum" data-de="Impressum" data-en="Legal Notice">Impressum</a></li>
+                        <li><a href="#datenschutz" data-de="Datenschutz" data-en="Privacy Policy">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-de="Entwickelt von" data-en="Developed by">Entwickelt von</h3>
+                    <p><strong>LetAIwork4u UG</strong></p>
+                    <p>HRB 17771, Bayern</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 beA4Outlook. Alle Rechte vorbehalten. Ein Produkt von LetAIwork4u UG.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="impressum" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 data-de="Impressum" data-en="Legal Notice">Impressum</h2>
+            <div class="impressum-content">
+                <h3 data-de="Angaben gemäß § 5 TMG" data-en="Information according to § 5 TMG">Angaben gemäß § 5 TMG</h3>
+                <p><strong>LetAIWork4U UG</strong><br>
+                Höchberg, Deutschland</p>
+                
+                <h3 data-de="Kontakt" data-en="Contact">Kontakt</h3>
+                <p>Telefon: +49 93161423087<br>
+                E-Mail: contact@letaiwork4u.com</p>
+                
+                <h3 data-de="Registereintrag" data-en="Register Entry">Registereintrag</h3>
+                <p>Eintragung im Handelsregister<br>
+                Registergericht: Bayern Amtsgericht Würzburg<br>
+                Registernummer: HRB 17771</p>
+                
+                <h3 data-de="Steuernummer" data-en="Tax Number">Steuernummer</h3>
+                <p>257/131/30195</p>
+                
+                <h3 data-de="Verantwortlich für den Inhalt" data-en="Responsible for content">Verantwortlich für den Inhalt</h3>
+                <p>Der Geschäftsführer der LetAIWork4U UG ist verantwortlich für den Inhalt dieser Website.</p>
+                
+                <h3 data-de="Haftungsausschluss" data-en="Disclaimer">Haftungsausschluss</h3>
+                <p data-de="Wir übernehmen keine Haftung für die Inhalte externer Links." data-en="We accept no liability for the content of external links.">
+                    Wir übernehmen keine Haftung für die Inhalte externer Links.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
